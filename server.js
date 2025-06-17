@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
+dotenv.config();
 import lodash from 'lodash';
 
 import usersData from './usersData.js';
@@ -21,13 +22,11 @@ const corsOptions = {
 };
 
 const app = express();
-dotenv.config();
 
 app.use(cors(corsOptions));
 
-// 서버를 시작하기 위한 더미 요청 API
-app.get('/wakeup', function (req, res) {
-  res.send(true);
+app.get('/', function (req, res) {
+  res.send('DFF Server');
 });
 
 // 유저의 아이템 득템 정보를 가져오는 API
@@ -45,8 +44,8 @@ app.get('/timeline', async function (req, res) {
   const filterdTimeLines = (
     await Promise.all(
       timeLines.map(async item => {
-        const itemInfo = await getItem(item.data.itemName);
         if (Number(item.code) === 504) {
+          const itemInfo = await getItem(item.data.itemName);
           if (
             Number(itemInfo.itemAvailableLevel) !== 115 ||
             itemInfo.itemType === '융합석'
@@ -56,6 +55,7 @@ app.get('/timeline', async function (req, res) {
           if (item.data.dungeonName === '폭풍의 역린 (주간)')
             return null;
         } else if (Number(item.code) === 507) {
+          const itemInfo = await getItem(item.data.itemName);
           if (Number(itemInfo.itemAvailableLevel) !== 115)
             return null;
         } else if (Number(item.code) === 513) {
@@ -74,10 +74,6 @@ app.get('/timeline', async function (req, res) {
   );
 
   res.json(sortTimeLine);
-});
-
-app.listen(3000, () => {
-  console.log('Server is running port:3000');
 });
 
 // 유저의 캐릭터들의 고유 아이디를 가져오는 로직
@@ -130,3 +126,7 @@ async function getItem(itemName) {
 
   return res.rows[0];
 }
+
+app.listen(8080, () => {
+  console.log('Server is running port:8080');
+});
