@@ -1,6 +1,7 @@
 const usersData = {
   geonguk: {
     server: 'cain',
+    adventureName: '유키유설',
     characters: [
       '유키유설#레',
       '유키유설#블',
@@ -19,14 +20,17 @@ const usersData = {
   },
   gyungoh: {
     server: 'cain',
-    characters: ['kko1', 'kko2', 'kko3', 'kko4', 'kko5']
+    adventureName: 'kko',
+    characters: ['kko1', 'kko2', 'kko3', 'kko4', 'kko5', 'kko6']
   },
   manseok: {
     server: 'cain',
-    characters: []
+    adventureName: 'pj피자신월점',
+    characters: ['김황식', '김매덕']
   },
   siwoo: {
     server: 'cain',
+    adventureName: '강서로47길83',
     characters: [
       '김덕식',
       '이덕식',
@@ -37,11 +41,15 @@ const usersData = {
       '배덕식',
       '진덕식',
       '오덕식',
-      '서덕식'
+      '서덕식',
+      '강덕식',
+      '허덕식',
+      '심덕식'
     ]
   },
   jaedeok: {
     server: 'cain',
+    adventureName: '민트초코파르페',
     characters: [
       '최예나.',
       '이채영.',
@@ -54,11 +62,20 @@ const usersData = {
       '해린,',
       '메카뽈리',
       '낌뽈리',
-      '원영이',
+      '원영이.',
       '낭만버서커쨩',
       '민트뽈리',
       '김블루._.',
-      '봉선.'
+      '봉선.',
+      '민트뽈리',
+      '금태양염황',
+      '용뽈리',
+      '수레센도',
+      '생명의루나',
+      '낭만원툴무극',
+      '기사뽈리',
+      '나잘한다해찌',
+      '흑화.'
     ]
   }
 };
