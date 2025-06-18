@@ -1,3 +1,4 @@
+import momentTimeZone from 'moment-timezone';
 import basicInstance from './basicInstanse.js';
 
 const getTimeLineApi = async (
@@ -6,7 +7,11 @@ const getTimeLineApi = async (
   characterId,
   code
 ) => {
-  const now = new Date();
+  const timeZone = 'Asia/Seoul';
+  const utc = momentTimeZone().tz(timeZone);
+
+  const now = new Date(utc.format('YYYY-MM-DD HH:mm:ss'));
+
   const year = now.getFullYear();
   const month = now.getMonth() + 1;
   const date = now.getDate();
