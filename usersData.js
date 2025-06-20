@@ -1,7 +1,6 @@
 const usersData = {
   geonguk: {
     server: 'cain',
-    adventureName: '유키유설',
     characters: [
       '유키유설#레',
       '유키유설#블',
@@ -20,17 +19,14 @@ const usersData = {
   },
   gyungoh: {
     server: 'cain',
-    adventureName: 'kko',
     characters: ['kko1', 'kko2', 'kko3', 'kko4', 'kko5', 'kko6']
   },
   manseok: {
     server: 'cain',
-    adventureName: 'pj피자신월점',
-    characters: ['김황식', '김매덕']
+    characters: ['김황식', '김매덕', '킴메덕', 'zl메라', '소환식']
   },
   siwoo: {
     server: 'cain',
-    adventureName: '강서로47길83',
     characters: [
       '김덕식',
       '이덕식',
@@ -49,7 +45,6 @@ const usersData = {
   },
   jaedeok: {
     server: 'cain',
-    adventureName: '민트초코파르페',
     characters: [
       '최예나.',
       '이채영.',

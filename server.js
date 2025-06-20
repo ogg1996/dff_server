@@ -38,7 +38,6 @@ app.get('/timeline', async function (req, res) {
   const characterIds = await fetchCharacterIds(userData);
   const timeLines = await fetchTimeLines(
     userData.server,
-    userData.adventureName,
     characterIds
   );
 
@@ -94,11 +93,7 @@ async function fetchCharacterIds(userData) {
 }
 
 // 유저의 아이템 득템 타임라인을 가져오는 로직
-async function fetchTimeLines(
-  userServer,
-  adventureName,
-  characterIds
-) {
+async function fetchTimeLines(userServer, characterIds) {
   // 항아리, 드랍, 레이드카드, 던전카드
   const codes = ['504,505', '507,513'];
   const timeLines = [];
@@ -115,7 +110,6 @@ async function fetchTimeLines(
       for (const timeline of res.timeline.rows) {
         timeLines.push({
           userServer,
-          adventureName,
           characterId,
           characterName: res.characterName,
           ...timeline
