@@ -9,7 +9,10 @@ import getIdApi from './api/getIdApi.js';
 import getTimeLineApi from './api/getTimeLineApi.js';
 import getItemApi from './api/getItemApi.js';
 
-const allowedOrigins = ['http://localhost:5173'];
+const allowedOrigins = [
+  'http://localhost:5173',
+  'https://dffriends.netlify.app'
+];
 
 const corsOptions = {
   origin: (origin, callback) => {
