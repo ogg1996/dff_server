@@ -3,6 +3,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 dotenv.config();
 import lodash from 'lodash';
+import pLimit from 'p-limit';
 
 import usersData from './usersData.js';
 import getIdApi from './api/getIdApi.js';
@@ -44,9 +45,11 @@ app.get('/timeline', async function (req, res) {
     characterIds
   );
 
-  const filterdTimeLines = (
-    await Promise.all(
-      timeLines.map(async item => {
+  const limit = pLimit(10);
+
+  const results = await Promise.all(
+    timeLines.map(item =>
+      limit(async () => {
         if (Number(item.code) === 504) {
           const itemInfo = await getItem(item.data.itemName);
           if (
@@ -68,7 +71,9 @@ app.get('/timeline', async function (req, res) {
         return item;
       })
     )
-  ).filter(item => item !== null);
+  );
+
+  const filterdTimeLines = results.filter(item => item !== null);
 
   const sortTimeLine = lodash.orderBy(
     filterdTimeLines,
