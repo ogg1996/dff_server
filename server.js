@@ -45,7 +45,7 @@ app.get('/timeline', async function (req, res) {
     characterIds
   );
 
-  const limit = pLimit(7);
+  const limit = pLimit(8);
 
   const results = await Promise.all(
     timeLines.map(item =>
