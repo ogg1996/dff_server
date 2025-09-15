@@ -58,14 +58,21 @@ app.get('/timeline', async function (req, res) {
           )
             return null;
         } else if (Number(item.code) === 505) {
-          if (item.data.dungeonName === '폭풍의 역린 (주간)')
+          if (
+            item.data.dungeonName === '폭풍의 역린 (주간)' ||
+            item.data.channelName === '이스핀즈'
+          )
             return null;
         } else if (Number(item.code) === 507) {
           const itemInfo = await getItem(item.data.itemName);
           if (Number(itemInfo.itemAvailableLevel) !== 115)
             return null;
         } else if (Number(item.code) === 513) {
-          if (item.data.dungeonName === '아스라한 기록실')
+          if (
+            item.data.dungeonName === '아스라한 기록실' ||
+            item.data.dungeonName === '용의 정원' ||
+            item.data.dungeonName === '배신자의 저택'
+          )
             return null;
         }
         return item;
