@@ -143,8 +143,10 @@ async function getItem(itemName) {
   return res.rows[0];
 }
 
-app.listen(8080, () => {
-  console.log('Server is running port:8080');
+const PORT = process.env.PORT || 8080;
+
+app.listen(PORT, () => {
+  console.log(`Server is running port: ${PORT}`);
 
   job.start();
 });
