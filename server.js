@@ -5,6 +5,7 @@ dotenv.config();
 import lodash from 'lodash';
 import pLimit from 'p-limit';
 
+import { job } from './cron.js';
 import usersData from './usersData.js';
 import getIdApi from './api/getIdApi.js';
 import getTimeLineApi from './api/getTimeLineApi.js';
@@ -144,4 +145,6 @@ async function getItem(itemName) {
 
 app.listen(8080, () => {
   console.log('Server is running port:8080');
+
+  job.start();
 });
