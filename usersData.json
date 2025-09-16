@@ -1,0 +1,74 @@
+{
+  "geonguk": {
+    "server": "cain",
+    "charactersIds": [
+      "aca526fb502dd4ca842c474a9c705727",
+      "1ebe5bbc08ae81562bb18bce90e6b33e",
+      "59dd0f475d03d21bb414e103999bf3f3",
+      "d7db811ff8d37fcc441474a2caf4e344",
+      "93352626cf61d021ca009802e72b8173",
+      "05aa62064ae5230aec52a8629689523d",
+      "b32aca80a5fac19ce8804b67810404ad",
+      "a408aa1cfbf6eeaa70cdbbb5a236b8ce",
+      "feb51a56869bd949a7ba6ce4a6df5678",
+      "1935295752cd57c283b2320d1b42620c",
+      "5188a06e1f2b14485474af458dd50758",
+      "23fb46335693caab89fe4c165ac7b27f",
+      "65969c1b3ae59b829971ad24387e9b67",
+      "d3ad3bf3d509e5f2cc5bce66dd8b8257"
+    ]
+  },
+  "gyungoh": {
+    "server": "cain",
+    "charactersIds": [
+      "42b16b698b59f56c54330edd956c99d5",
+      "a3e28e4f7dd242e76668f96100469d90",
+      "7f16c6966e6a03095b69630115d1dba8",
+      "0bf44270700075e7a11c733f1679619d",
+      "80b643b577cb10b04806291d27b4302a",
+      "e82a551db1f707f0a1db6db18ed150e8",
+      "ef72166260eb3a49d4b4f14910c92198",
+      "a450c05637369230c38ebbe3e1f624a9"
+    ]
+  },
+  "siwoo": {
+    "server": "cain",
+    "charactersIds": [
+      "237ea9c752e12d0bcd7d3567531acfc4",
+      "dcf40dbbc072e681515d8ae49fbc9c62",
+      "657baeb117c6b7b6a295a9385486aa4c",
+      "3f22aad1cf3b2f33f19854f7ed353057",
+      "1d47df4f407fd006eba1e9154a0a3f63",
+      "b5ef42b87de965c895e00869a8bfcdc6",
+      "7029ee4b1c1422af2b43540c4933868d",
+      "6e219820b8f182ebf33d33b1e11e1062",
+      "b65d0a6f6bea600a2f314b08b1cbc861",
+      "182fb9cca59f8cd26c54cf933f184da9",
+      "7e48e9c30b2044b51349bf5385ad079f",
+      "60c1f3a03b1aa3897ecd718063a452f2",
+      "d135cd0f508b56b28630f5b208572859",
+      "fd7948d01fa98f87fd59c0d965dbfe7b",
+      "eab3542e01ed68be65eace2d717094d8",
+      "5baec2f09a2d21f48165a7bdcb5a5e0d"
+    ]
+  },
+  "jaedeok": {
+    "server": "cain",
+    "charactersIds": [
+      "91417f9ed0074bb03790818ef903e3ec",
+      "0ecf65ec4cee0d95da0d565face3ca89",
+      "3d28887d9b4ecde04d17495950f8e496",
+      "6bd02934a395f7add58fe2b3a42ea611",
+      "a40c6b7aefa2f33927b91737cb5ccefc",
+      "0affdf7b73265d67885274a558c723ba",
+      "5658bba1a63211e80758d9e960bd9436",
+      "a6f7928abe270904f31b0eb5dd0fab72",
+      "12d3bab6a985a04f69b1006a35c52b33",
+      "1fe44259a1326a72c0bebd04951df515",
+      "82c8f16d43c09ae362328891e0fadc93",
+      "0bc4511bfcdf886ce8eec5b560080fca",
+      "20ddc90b0b4c8c67e2e294799831d9a4",
+      "ec37796a208c31d44048fa204a670c8e"
+    ]
+  }
+}

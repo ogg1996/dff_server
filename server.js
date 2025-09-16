@@ -4,10 +4,9 @@ import dotenv from 'dotenv';
 dotenv.config();
 import lodash from 'lodash';
 import pLimit from 'p-limit';
+import fs from 'fs';
 
 import { job } from './cron.js';
-import usersData from './usersData.js';
-import getIdApi from './api/getIdApi.js';
 import getTimeLineApi from './api/getTimeLineApi.js';
 import getItemApi from './api/getItemApi.js';
 
@@ -38,9 +37,12 @@ app.get('/', function (req, res) {
 app.get('/timeline', async function (req, res) {
   const user = req.query.user;
 
+  const loadData = fs.readFileSync('./usersData.json', 'utf-8');
+  const usersData = JSON.parse(loadData);
   const userData = usersData[user];
 
-  const characterIds = await fetchCharacterIds(userData);
+  const characterIds = userData.charactersIds;
+
   const timeLines = await fetchTimeLines(
     userData.server,
     characterIds
