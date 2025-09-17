@@ -4,7 +4,7 @@ import axios from 'axios';
 const BACKEND_URL = 'https://dff-server.onrender.com';
 
 export const job = cron.schedule(
-  '*/13 * * * *',
+  '*/10 * * * *',
   async () => {
     try {
       const res = await axios.get(BACKEND_URL);
