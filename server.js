@@ -6,7 +6,6 @@ import lodash from 'lodash';
 import pLimit from 'p-limit';
 import fs from 'fs';
 
-import { job } from './cron.js';
 import getTimeLineApi from './api/getTimeLineApi.js';
 import getItemApi from './api/getItemApi.js';
 
@@ -133,6 +132,4 @@ const PORT = process.env.PORT || 8080;
 
 app.listen(PORT, () => {
   console.log(`Server is running port: ${PORT}`);
-
-  job.start();
 });
