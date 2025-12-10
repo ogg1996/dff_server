@@ -94,22 +94,6 @@ app.get('/timeline', async function (req, res) {
   res.json(sortTimeLine);
 });
 
-// 유저의 캐릭터들의 고유 아이디를 가져오는 로직
-async function fetchCharacterIds(userData) {
-  const charactersIds = [];
-
-  for (const characterName of userData.characters) {
-    const res = await getIdApi(
-      process.env.API_KEY,
-      userData.server,
-      characterName
-    );
-    charactersIds.push(res.rows[0].characterId);
-  }
-
-  return charactersIds;
-}
-
 // 유저의 아이템 득템 타임라인을 가져오는 로직
 async function fetchTimeLines(userServer, characterIds) {
   // 항아리, 드랍, 레이드카드, 던전카드
