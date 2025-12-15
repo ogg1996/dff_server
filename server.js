@@ -14,19 +14,9 @@ const allowedOrigins = [
   'https://dffriends.netlify.app'
 ];
 
-const corsOptions = {
-  origin: (origin, callback) => {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(null, true);
-    }
-  }
-};
-
 const app = express();
 
-app.use(cors(corsOptions));
+app.use(cors({ origin: allowedOrigins }));
 
 app.get('/', function (req, res) {
   res.send('DFF Server');
@@ -54,6 +44,8 @@ app.get('/timeline', async function (req, res) {
       limit(async () => {
         if (Number(item.code) === 504) {
           const itemInfo = await getItem(item.data.itemName);
+          if (!itemInfo) return null;
+
           if (
             Number(itemInfo.itemAvailableLevel) !== 115 ||
             itemInfo.itemType === '융합석'
