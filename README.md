@@ -1,4 +1,4 @@
-# DFFriends [서버]
+# 🎮 DFFriends [서버]
 > **나와 친구들의 던전앤파이터 아이템 획득 타임로그 API**
 
 ![Node.js](https://img.shields.io/badge/Node.js-20.x-green) 
