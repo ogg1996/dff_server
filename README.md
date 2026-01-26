@@ -1,9 +1,7 @@
-# 🎮 DFFriends [서버]
+# 🎮 DFFriends [서버] (배포중지)
 > **나와 친구들의 던전앤파이터 아이템 획득 타임로그 API**
 
-![Node.js](https://img.shields.io/badge/Node.js-20.x-green) 
-![Express](https://img.shields.io/badge/Express.js-4.x-blue)
-![License](https://img.shields.io/badge/License-ISC-yellow)
+<br>
 
 ## 📌 프로젝트 소개
 이 프로젝트는 🖥️ **[dff-front](https://github.com/ogg1996/dff_front)** 웹 서비스의 백엔드 API 서버입니다.  
